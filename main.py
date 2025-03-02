@@ -13,6 +13,7 @@ previous_val = "None"
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    "https://*.railway.app"  
 ]
 
 app.add_middleware(
