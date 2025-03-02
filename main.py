@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import os
 # from routes.predict import predict
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
