@@ -1,7 +1,7 @@
+fastapi
+uvicorn
 ultralytics
 supervision
 roboflow
 joblib
 scikit-learn
-fastapi
-uvicorn
