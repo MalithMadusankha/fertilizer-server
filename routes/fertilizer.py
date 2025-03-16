@@ -1,6 +1,4 @@
 from fastapi import APIRouter
-from controller.fertilizer import get_plant_growth, delete_plant_growth, get_all_plant_growths, clear_result, predict_plant_growth, clear_growths
-from schemas.fertilizer import PlantFeatures
 
 import os
 import uuid
@@ -74,33 +72,3 @@ async def upload_images(
         "result_image_url": result_image_url
     }
 
-
-@fertilizer.post("/plant-growth")
-async def predict_growth(features: PlantFeatures):
-    return await predict_plant_growth(features)
-
-# Fetch all plant growth records
-@fertilizer.get("/plant-growths")
-async def fetch_all():
-    return await get_all_plant_growths()
-
-# Fetch a single record by _id
-@fertilizer.get("/plant-growth/{id}")
-async def fetch_one(id: str):
-    return await get_plant_growth(id)
-
-# Delete a record by _id
-@fertilizer.delete("/plant-growth/{id}")
-async def delete_one(id: str):
-    return await delete_plant_growth(id)
-
-
-@fertilizer.delete("/clear-results")
-async def clear_results():
-    print("<=================== clear-results ===================>")
-    return await clear_result()
-
-@fertilizer.delete("/delete-growths")
-async def clear_results():
-    print("<=================== clear-results ===================>")
-    return await clear_growths()
