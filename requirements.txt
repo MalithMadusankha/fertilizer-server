@@ -2,8 +2,6 @@ fastapi
 uvicorn
 ultralytics
 supervision
-opencv-python
-torch
 roboflow
 joblib
 scikit-learn
