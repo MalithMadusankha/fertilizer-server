@@ -5,3 +5,4 @@ supervision
 roboflow
 joblib
 scikit-learn
+pymongo
