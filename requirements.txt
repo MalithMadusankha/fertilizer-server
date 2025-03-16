@@ -6,3 +6,4 @@ roboflow
 joblib
 scikit-learn
 pymongo
+opencv-python-headless
